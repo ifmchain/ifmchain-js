@@ -28,7 +28,7 @@ var ifmchainJs = require('ifmchain-js')("testnet");//or mainnet
 ```
 
 ### connect to ifmchain net
-
+- **url is mainnet.ifmchain.org while not input url, which net is main net**
 ```sh
 var ifmchainJs = require('ifmchain-js')()
 var url = "http://127.0.0.1:19000"; //the ifmchain url that your want to connect
@@ -75,11 +75,32 @@ ifmchainApi.account.getUserByUsername(username)
     })
 ```
 
+### get peers from ifmchain 
+ - **{String}** &nbsp;&nbsp; ip //such as 127.0.0.1
+ - **{Number}** &nbsp;&nbsp;port 
+ - **{Number}** &nbsp;&nbsp;state //0 means peer is wrong
+ - **{String}** &nbsp;&nbsp;version
+ - **{String}** &nbsp;&nbsp;os
+  
+#### properties of orderBy (all the properties are optional, and can be "desc" or "asc"):
+```sh
+    ip
+    port
+    state
+    version
+    os
+```
+```sh
+ifmchainApi.block.getPeers()
+    .then(function(data){
+        //success data: { success: true, peers: [object] }
+    });
+```
 
 ### get block hight from ifmchain 
 
 ```sh
-ifmchainApi.block.getHeight()
+ifmchainApi.peer.getHeight()
     .then(function(data){
         //success data: { success: true, height: 8994 }
     });
@@ -124,7 +145,7 @@ ifmchainApi.block.getBlockById(blockId)
 
 ifmchainApi.block.getBlocks(info)
     .then(function(data){
-        //success data: { success: true, blocks: [obeject] }
+        //success data: { success: true, blocks: [object] }
     })
 ```
 

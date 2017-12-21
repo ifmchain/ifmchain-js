@@ -75,7 +75,7 @@ ifmchainApi.account.getUserByUsername(username)
     })
 ```
 
-### get peers from ifmchain 
+### get peers from ifmchain (all the param are optional)
  - **{String}** &nbsp;&nbsp; ip //such as 127.0.0.1
  - **{Number}** &nbsp;&nbsp;port 
  - **{Number}** &nbsp;&nbsp;state //0 means peer is wrong
@@ -91,7 +91,14 @@ ifmchainApi.account.getUserByUsername(username)
     os
 ```
 ```sh
-ifmchainApi.block.getPeers()
+
+var info = {
+    ip: "127.0.0.1",
+    port: 19003,
+    oderBy: "ip:desc"
+}
+
+ifmchainApi.block.getPeers(info)
     .then(function(data){
         //success data: { success: true, peers: [object] }
     });

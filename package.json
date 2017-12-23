@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "bitcore-mnemonic": "^1.2.5",
+    "buffer": "^5.0.8",
     "buffer-to-uint8array": "^1.1.0",
     "bytebuffer": "^5.0.1",
     "crypto": "0.0.3",

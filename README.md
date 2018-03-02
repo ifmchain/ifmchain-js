@@ -30,7 +30,7 @@ var ifmchainJs = require('ifmchain-js')("testnet");//or mainnet
 ### connect to ifmchain net
 - **url is mainnet.ifmchain.org while not input url, which net is main net**
 ```sh
-var ifmchainJs = require('ifmchain-js')()
+var ifmchainJs = require('ifmchain-js')("testnet");//or mainnet
 var url = "http://127.0.0.1:19000"; //the ifmchain url that your want to connect
 var timeout = 2000; //connect timeout 
 var httpProvider = new ifmchainJs.HttpProvider(url, timeout); //use http connect to ifmchain

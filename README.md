@@ -98,7 +98,7 @@ var info = {
     oderBy: "ip:desc"
 }
 
-ifmchainApi.block.getPeers(info)
+ifmchainApi.peer.getPeers(info)
     .then(function(data){
         //success data: { success: true, peers: [object] }
     });

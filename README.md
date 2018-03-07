@@ -108,6 +108,8 @@ ifmchainApi.peer.getPeers(info)
  - **{String}** &nbsp;&nbsp; ip //the ip which is near the available peer
  - **{Number}** &nbsp;&nbsp;peerCount //the count of peer you want, 57 at most
   
+
+```sh
 let info = {
         serachIp: "127.0.0.1",
         peerCount: 57
@@ -116,6 +118,7 @@ ifmchainApi.peer.searchPeers(info, (data) => {
         //data : []
     })
 ```
+
 
 ### get block hight from ifmchain 
 

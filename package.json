@@ -1,6 +1,6 @@
 {
   "name": "ifmchain-js",
-  "version": "0.1.2",
+  "version": "0.2.2",
   "description": "ifmchain js lobraries",
   "main": "index.js",
   "scripts": {

@@ -1,9 +1,9 @@
 
 var configFactory = require("./lib/helpers/configFactory");
 
-var IfmchainJs = function(NET_VERSION) {
+var IfmchainJs = function (NET_VERSION) {
 
-    this.getIfmchainJsObject = function(){
+    this.getIfmchainJsObject = function () {
         return {
             configFactory: require("./lib/helpers/configFactory"),
             transaction: require("./lib/transactions/transaction.js"),
@@ -18,15 +18,15 @@ var IfmchainJs = function(NET_VERSION) {
         }
     }
 
-    if(NET_VERSION){
+    if (NET_VERSION) {
         //set environment
         configFactory.setNET_VERSION(NET_VERSION);
         return this.getIfmchainJsObject();
 
-    }else if(configFactory.getNET_VERSION()){
+    } else if (configFactory.getNET_VERSION()) {
         //already has environment
         return this.getIfmchainJsObject();
-    }else{
+    } else {
         throw "set ifmchainjs environment error";
     }
 }

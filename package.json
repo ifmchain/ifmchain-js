@@ -1,6 +1,6 @@
 {
   "name": "ifmchain-js",
-  "version": "0.0.1",
+  "version": "0.2.2",
   "description": "ifmchain js lobraries",
   "main": "index.js",
   "scripts": {
@@ -18,13 +18,17 @@
     "should": "^11.2.1"
   },
   "dependencies": {
+    "async": "^2.6.0",
     "bitcore-mnemonic": "^1.2.5",
+    "buffer": "^5.0.8",
     "buffer-to-uint8array": "^1.1.0",
     "bytebuffer": "^5.0.1",
     "crypto": "0.0.3",
     "crypto-browserify": "^3.12.0",
     "debug": "^2.6.8",
     "elliptic": "^6.4.0",
+    "netscan": "^1.0.3",
+    "public-ip": "^2.4.0",
     "request-promise": "^4.2.2",
     "winston": "^2.3.1",
     "xhr2": "^0.1.4",

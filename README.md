@@ -28,9 +28,9 @@ var ifmchainJs = require('ifmchain-js')("testnet");//or mainnet
 ```
 
 ### connect to ifmchain net
-
+- **url is mainnet.ifmchain.org while not input url, which net is main net**
 ```sh
-var ifmchainJs = require('ifmchain-js')()
+var ifmchainJs = require('ifmchain-js')("testnet");//or mainnet
 var url = "http://127.0.0.1:19000"; //the ifmchain url that your want to connect
 var timeout = 2000; //connect timeout 
 var httpProvider = new ifmchainJs.HttpProvider(url, timeout); //use http connect to ifmchain
@@ -75,11 +75,55 @@ ifmchainApi.account.getUserByUsername(username)
     })
 ```
 
+### get peers from ifmchain (all the param are optional)
+ - **{String}** &nbsp;&nbsp; ip //such as 127.0.0.1
+ - **{Number}** &nbsp;&nbsp;port 
+ - **{Number}** &nbsp;&nbsp;state //0 means peer is wrong
+ - **{String}** &nbsp;&nbsp;version
+ - **{String}** &nbsp;&nbsp;os
+  
+#### properties of orderBy (all the properties are optional, and can be "desc" or "asc"):
+```sh
+    ip
+    port
+    state
+    version
+    os
+```
+```sh
+
+var info = {
+    ip: "127.0.0.1",
+    port: 19003,
+    oderBy: "ip:desc"
+}
+
+ifmchainApi.peer.getPeers(info)
+    .then(function(data){
+        //success data: { success: true, peers: [object] }
+    });
+```
+
+### serach peers from ifmchain (all the param are optional)
+ - **{String}** &nbsp;&nbsp; ip //the ip which is near the available peer
+ - **{Number}** &nbsp;&nbsp;peerCount //the count of peer you want, 57 at most
+  
+
+```sh
+let info = {
+        serachIp: "127.0.0.1",
+        peerCount: 57
+    }
+ifmchainApi.peer.searchPeers(info, (data) => {
+        //data : []
+    })
+```
+
 
 ### get block hight from ifmchain 
 
 ```sh
-ifmchainApi.block.getHeight()
+ifmchainApi.peer.getHeight()
     .then(function(data){
         //success data: { success: true, height: 8994 }
     });
@@ -124,7 +168,7 @@ ifmchainApi.block.getBlockById(blockId)
 
 ifmchainApi.block.getBlocks(info)
     .then(function(data){
-        //success data: { success: true, blocks: [obeject] }
+        //success data: { success: true, blocks: [object] }
     })
 ```
 

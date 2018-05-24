@@ -1,20 +1,16 @@
 {
     "NET_VERSION": {
         "mainnet": "mainnet",
-        "testnet": "testnet",
-        "goldnet": "goldnet"
+        "testnet": "testnet"
     },
     "initials": {
         "mainnet": "b",
-        "testnet": "c",
-        "goldnet": "g"
+        "testnet": "c"
     },
     "beginUTC": {
         "orginDataOfMainnet":  "Date.UTC(2017, 11, 27, 16, 0, 0, 0)",
         "mainnet": 1514390400000, 
         "orginDataOfTestnet": "Date.UTC(2017, 11, 27, 16, 0, 0, 0)",
-        "testnet": 1514390400000,
-        "orginDataOfGoldnet": "Date.UTC(2017, 11, 27, 16, 0, 0, 0)",
-        "goldnet": 1514390400000
+        "testnet": 1514390400000
     }
 }
